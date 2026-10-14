@@ -1,0 +1,1122 @@
+{
+ "schemaVersion": 1,
+ "id": "chapter-01",
+ "index": 1,
+ "paletteKey": "meadow",
+ "theme": {
+  "fr": "Nature",
+  "en": "Nature"
+ },
+ "levels": [
+  {
+   "id": "c1-l01",
+   "number": 1,
+   "theme": {
+    "fr": "Plage",
+    "en": "Beach"
+   },
+   "visualStyle": "STYLE_1",
+   "gridSize": 3,
+   "difficulty": {
+    "tier": 1,
+    "ambiguity": 0.0,
+    "score": 23
+   },
+   "hints": {
+    "maxPerLevel": 2
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "EIM",
+      "VLE",
+      "EER"
+     ],
+     "words": [
+      {
+       "display": "MER",
+       "letters": "MER",
+       "row": 0,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "ÎLE",
+       "letters": "ILE",
+       "row": 0,
+       "col": 1,
+       "direction": "S"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "SAS",
+      "EIU",
+      "ASN"
+     ],
+     "words": [
+      {
+       "display": "SEA",
+       "letters": "SEA",
+       "row": 0,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "SUN",
+       "letters": "SUN",
+       "row": 0,
+       "col": 2,
+       "direction": "S"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c1-l02",
+   "number": 2,
+   "theme": {
+    "fr": "Jardin",
+    "en": "Garden"
+   },
+   "visualStyle": "STYLE_1",
+   "gridSize": 3,
+   "difficulty": {
+    "tier": 1,
+    "ambiguity": 0.1,
+    "score": 28
+   },
+   "hints": {
+    "maxPerLevel": 2
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "PIN",
+      "RAN",
+      "EAU"
+     ],
+     "words": [
+      {
+       "display": "PRÉ",
+       "letters": "PRE",
+       "row": 0,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "PIN",
+       "letters": "PIN",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "EAU",
+       "letters": "EAU",
+       "row": 2,
+       "col": 0,
+       "direction": "E"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "BEE",
+      "ULI",
+      "GMA"
+     ],
+     "words": [
+      {
+       "display": "BEE",
+       "letters": "BEE",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "BUG",
+       "letters": "BUG",
+       "row": 0,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "ELM",
+       "letters": "ELM",
+       "row": 0,
+       "col": 1,
+       "direction": "S"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c1-l03",
+   "number": 3,
+   "theme": {
+    "fr": "Forêt",
+    "en": "Forest"
+   },
+   "visualStyle": "STYLE_1",
+   "gridSize": 4,
+   "difficulty": {
+    "tier": 1,
+    "ambiguity": 0.2,
+    "score": 33
+   },
+   "hints": {
+    "maxPerLevel": 3
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "LOUP",
+      "BOIS",
+      "CERF",
+      "NROO"
+     ],
+     "words": [
+      {
+       "display": "LOUP",
+       "letters": "LOUP",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "BOIS",
+       "letters": "BOIS",
+       "row": 1,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "CERF",
+       "letters": "CERF",
+       "row": 2,
+       "col": 0,
+       "direction": "E"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "KBTL",
+      "RERE",
+      "IAEA",
+      "PREF"
+     ],
+     "words": [
+      {
+       "display": "BEAR",
+       "letters": "BEAR",
+       "row": 0,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "TREE",
+       "letters": "TREE",
+       "row": 0,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "LEAF",
+       "letters": "LEAF",
+       "row": 0,
+       "col": 3,
+       "direction": "S"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c1-l04",
+   "number": 4,
+   "theme": {
+    "fr": "Montagne",
+    "en": "Mountain"
+   },
+   "visualStyle": "STYLE_2",
+   "gridSize": 4,
+   "difficulty": {
+    "tier": 1,
+    "ambiguity": 0.3,
+    "score": 37
+   },
+   "hints": {
+    "maxPerLevel": 3
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "TPIC",
+      "SLAC",
+      "KNLA",
+      "IROC"
+     ],
+     "words": [
+      {
+       "display": "LAC",
+       "letters": "LAC",
+       "row": 1,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "SKI",
+       "letters": "SKI",
+       "row": 1,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "ROC",
+       "letters": "ROC",
+       "row": 3,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "PIC",
+       "letters": "PIC",
+       "row": 0,
+       "col": 1,
+       "direction": "E"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "ESNY",
+      "LKOA",
+      "KIOK",
+      "PICE"
+     ],
+     "words": [
+      {
+       "display": "ICE",
+       "letters": "ICE",
+       "row": 3,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "SKI",
+       "letters": "SKI",
+       "row": 0,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "ELK",
+       "letters": "ELK",
+       "row": 0,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "YAK",
+       "letters": "YAK",
+       "row": 0,
+       "col": 3,
+       "direction": "S"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c1-l05",
+   "number": 5,
+   "theme": {
+    "fr": "Océan",
+    "en": "Ocean"
+   },
+   "visualStyle": "STYLE_2",
+   "gridSize": 5,
+   "difficulty": {
+    "tier": 2,
+    "ambiguity": 0.4,
+    "score": 49
+   },
+   "hints": {
+    "maxPerLevel": 3
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "VTHON",
+      "RAIET",
+      "UEGRU",
+      "IUUUR",
+      "CRABE"
+     ],
+     "words": [
+      {
+       "display": "VAGUE",
+       "letters": "VAGUE",
+       "row": 0,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "CRABE",
+       "letters": "CRABE",
+       "row": 4,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "THON",
+       "letters": "THON",
+       "row": 0,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "RAIE",
+       "letters": "RAIE",
+       "row": 1,
+       "col": 0,
+       "direction": "E"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "CSCWG",
+      "XHRAF",
+      "SEAVI",
+      "HLBES",
+      "RLTHH"
+     ],
+     "words": [
+      {
+       "display": "WAVE",
+       "letters": "WAVE",
+       "row": 0,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "CRAB",
+       "letters": "CRAB",
+       "row": 0,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "FISH",
+       "letters": "FISH",
+       "row": 1,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "display": "SHELL",
+       "letters": "SHELL",
+       "row": 0,
+       "col": 1,
+       "direction": "S"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c1-l06",
+   "number": 6,
+   "theme": {
+    "fr": "Animaux",
+    "en": "Animals"
+   },
+   "visualStyle": "STYLE_2",
+   "gridSize": 5,
+   "difficulty": {
+    "tier": 2,
+    "ambiguity": 0.5,
+    "score": 53
+   },
+   "hints": {
+    "maxPerLevel": 3
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "LLOAL",
+      "CYUPI",
+      "HNRUO",
+      "AXSMN",
+      "TTNAA"
+     ],
+     "words": [
+      {
+       "display": "CHAT",
+       "letters": "CHAT",
+       "row": 1,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "LION",
+       "letters": "LION",
+       "row": 0,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "display": "OURS",
+       "letters": "OURS",
+       "row": 0,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "PUMA",
+       "letters": "PUMA",
+       "row": 1,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "LYNX",
+       "letters": "LYNX",
+       "row": 0,
+       "col": 1,
+       "direction": "S"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "SFROG",
+      "LLION",
+      "RDUCK",
+      "OGOAT",
+      "JDEER"
+     ],
+     "words": [
+      {
+       "display": "LION",
+       "letters": "LION",
+       "row": 1,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "DUCK",
+       "letters": "DUCK",
+       "row": 2,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "FROG",
+       "letters": "FROG",
+       "row": 0,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "GOAT",
+       "letters": "GOAT",
+       "row": 3,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "DEER",
+       "letters": "DEER",
+       "row": 4,
+       "col": 1,
+       "direction": "E"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c1-l07",
+   "number": 7,
+   "theme": {
+    "fr": "Fruits",
+    "en": "Fruits"
+   },
+   "visualStyle": "STYLE_3",
+   "gridSize": 6,
+   "difficulty": {
+    "tier": 3,
+    "ambiguity": 0.55,
+    "score": 66
+   },
+   "hints": {
+    "maxPerLevel": 3
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "NENERK",
+      "OMXEEI",
+      "LIIUMW",
+      "ELEGMI",
+      "MERIOP",
+      "EPIFPE"
+     ],
+     "words": [
+      {
+       "display": "POMME",
+       "letters": "POMME",
+       "row": 5,
+       "col": 4,
+       "direction": "N"
+      },
+      {
+       "display": "POIRE",
+       "letters": "POIRE",
+       "row": 4,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "FIGUE",
+       "letters": "FIGUE",
+       "row": 5,
+       "col": 3,
+       "direction": "N"
+      },
+      {
+       "display": "KIWI",
+       "letters": "KIWI",
+       "row": 0,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "display": "MELON",
+       "letters": "MELON",
+       "row": 4,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "LIME",
+       "letters": "LIME",
+       "row": 3,
+       "col": 1,
+       "direction": "N"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "RELPPA",
+      "APEIKF",
+      "EAMAIN",
+      "PROAWP",
+      "MGNNIE",
+      "GNOLEM"
+     ],
+     "words": [
+      {
+       "display": "APPLE",
+       "letters": "APPLE",
+       "row": 0,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "PEAR",
+       "letters": "PEAR",
+       "row": 3,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "GRAPE",
+       "letters": "GRAPE",
+       "row": 4,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "LEMON",
+       "letters": "LEMON",
+       "row": 0,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "MELON",
+       "letters": "MELON",
+       "row": 5,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "KIWI",
+       "letters": "KIWI",
+       "row": 1,
+       "col": 4,
+       "direction": "S"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c1-l08",
+   "number": 8,
+   "theme": {
+    "fr": "Météo",
+    "en": "Weather"
+   },
+   "visualStyle": "STYLE_3",
+   "gridSize": 6,
+   "difficulty": {
+    "tier": 3,
+    "ambiguity": 0.6,
+    "score": 67
+   },
+   "hints": {
+    "maxPerLevel": 3
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "ANUAGE",
+      "BREDRG",
+      "TRIMEA",
+      "NGUELR",
+      "EALMEO",
+      "VEPAES"
+     ],
+     "words": [
+      {
+       "display": "PLUIE",
+       "letters": "PLUIE",
+       "row": 5,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "VENT",
+       "letters": "VENT",
+       "row": 5,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "ORAGE",
+       "letters": "ORAGE",
+       "row": 4,
+       "col": 5,
+       "direction": "N"
+      },
+      {
+       "display": "NUAGE",
+       "letters": "NUAGE",
+       "row": 0,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "BRUME",
+       "letters": "BRUME",
+       "row": 1,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "GRÊLE",
+       "letters": "GRELE",
+       "row": 0,
+       "col": 4,
+       "direction": "S"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "DNIWML",
+      "FSCIRB",
+      "TRLAOM",
+      "WAOOTI",
+      "TIUSSS",
+      "TNDSTT"
+     ],
+     "words": [
+      {
+       "display": "RAIN",
+       "letters": "RAIN",
+       "row": 2,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "WIND",
+       "letters": "WIND",
+       "row": 0,
+       "col": 3,
+       "direction": "W"
+      },
+      {
+       "display": "STORM",
+       "letters": "STORM",
+       "row": 4,
+       "col": 4,
+       "direction": "N"
+      },
+      {
+       "display": "CLOUD",
+       "letters": "CLOUD",
+       "row": 1,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "MIST",
+       "letters": "MIST",
+       "row": 2,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "display": "FROST",
+       "letters": "FROST",
+       "row": 1,
+       "col": 0,
+       "direction": "SE"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c1-l09",
+   "number": 9,
+   "theme": {
+    "fr": "Fleurs",
+    "en": "Flowers"
+   },
+   "visualStyle": "STYLE_3",
+   "gridSize": 6,
+   "difficulty": {
+    "tier": 3,
+    "ambiguity": 0.7,
+    "score": 70
+   },
+   "hints": {
+    "maxPerLevel": 3
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "SUTOLE",
+      "SSORIP",
+      "ORVTRI",
+      "SSALIL",
+      "ARPLSU",
+      "MUGUET"
+     ],
+     "words": [
+      {
+       "display": "TULIPE",
+       "letters": "TULIPE",
+       "row": 5,
+       "col": 5,
+       "direction": "N"
+      },
+      {
+       "display": "MUGUET",
+       "letters": "MUGUET",
+       "row": 5,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "LILAS",
+       "letters": "LILAS",
+       "row": 3,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "PAVOT",
+       "letters": "PAVOT",
+       "row": 4,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "LOTUS",
+       "letters": "LOTUS",
+       "row": 0,
+       "col": 4,
+       "direction": "W"
+      },
+      {
+       "display": "IRIS",
+       "letters": "IRIS",
+       "row": 1,
+       "col": 4,
+       "direction": "S"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "YSIADY",
+      "LTULIP",
+      "PIEIHO",
+      "RLSLCP",
+      "YEOARP",
+      "LLRCOY"
+     ],
+     "words": [
+      {
+       "display": "TULIP",
+       "letters": "TULIP",
+       "row": 1,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "LILAC",
+       "letters": "LILAC",
+       "row": 1,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "DAISY",
+       "letters": "DAISY",
+       "row": 0,
+       "col": 4,
+       "direction": "W"
+      },
+      {
+       "display": "POPPY",
+       "letters": "POPPY",
+       "row": 1,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "display": "ORCHID",
+       "letters": "ORCHID",
+       "row": 5,
+       "col": 4,
+       "direction": "N"
+      },
+      {
+       "display": "ROSE",
+       "letters": "ROSE",
+       "row": 5,
+       "col": 2,
+       "direction": "N"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c1-l10",
+   "number": 10,
+   "theme": {
+    "fr": "Le grand air",
+    "en": "The great outdoors"
+   },
+   "visualStyle": "FINAL",
+   "gridSize": 10,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 1.0,
+    "score": 105
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "TTREICALGN",
+      "EOEIAITREA",
+      "RTMGVITOTL",
+      "ONEOEIFTEI",
+      "FAIENEELPE",
+      "ECFETTORML",
+      "ELVGUIALEO",
+      "NOZIROHGTS",
+      "DVETEVTGNI",
+      "AGOCASCADE"
+     ],
+     "words": [
+      {
+       "display": "MONTAGNE",
+       "letters": "MONTAGNE",
+       "row": 2,
+       "col": 2,
+       "direction": "SE"
+      },
+      {
+       "display": "RIVIÈRE",
+       "letters": "RIVIERE",
+       "row": 0,
+       "col": 2,
+       "direction": "SE"
+      },
+      {
+       "display": "CASCADE",
+       "letters": "CASCADE",
+       "row": 9,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "FORÊT",
+       "letters": "FORET",
+       "row": 4,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "HORIZON",
+       "letters": "HORIZON",
+       "row": 7,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "AVENTURE",
+       "letters": "AVENTURE",
+       "row": 1,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "display": "SOLEIL",
+       "letters": "SOLEIL",
+       "row": 7,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "TEMPÊTE",
+       "letters": "TEMPETE",
+       "row": 7,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "VOLCAN",
+       "letters": "VOLCAN",
+       "row": 8,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "GLACIER",
+       "letters": "GLACIER",
+       "row": 0,
+       "col": 8,
+       "direction": "W"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "ONNEWCNCAR",
+      "OWIREICALG",
+      "ECAUONNWAT",
+      "FATTTHAOVU",
+      "ONNNEOOBAN",
+      "RYUESRINEO",
+      "EOOVNIFIFN",
+      "SNMDUZOANL",
+      "TNNASOORLR",
+      "VOLCANOOTL"
+     ],
+     "words": [
+      {
+       "display": "MOUNTAIN",
+       "letters": "MOUNTAIN",
+       "row": 7,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "WATERFALL",
+       "letters": "WATERFALL",
+       "row": 1,
+       "col": 1,
+       "direction": "SE"
+      },
+      {
+       "display": "FOREST",
+       "letters": "FOREST",
+       "row": 3,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "HORIZON",
+       "letters": "HORIZON",
+       "row": 3,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "display": "SUNSET",
+       "letters": "SUNSET",
+       "row": 8,
+       "col": 4,
+       "direction": "N"
+      },
+      {
+       "display": "ADVENTURE",
+       "letters": "ADVENTURE",
+       "row": 8,
+       "col": 3,
+       "direction": "N"
+      },
+      {
+       "display": "RAINBOW",
+       "letters": "RAINBOW",
+       "row": 8,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "VOLCANO",
+       "letters": "VOLCANO",
+       "row": 9,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "GLACIER",
+       "letters": "GLACIER",
+       "row": 1,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "CANYON",
+       "letters": "CANYON",
+       "row": 2,
+       "col": 1,
+       "direction": "S"
+      }
+     ]
+    }
+   }
+  }
+ ]
+}
