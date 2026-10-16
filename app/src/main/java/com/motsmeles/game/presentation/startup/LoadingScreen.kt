@@ -1,6 +1,7 @@
 package com.motsmeles.game.presentation.startup
 
 import androidx.annotation.StringRes
+import androidx.compose.animation.core.CubicBezierEasing
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.RepeatMode
@@ -44,6 +45,7 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.motsmeles.game.R
+import com.motsmeles.game.presentation.components.ChunkyProgressBar
 import com.motsmeles.game.presentation.theme.WgColors
 import com.motsmeles.game.presentation.theme.WgMotion
 import com.motsmeles.game.presentation.theme.WgRadius
