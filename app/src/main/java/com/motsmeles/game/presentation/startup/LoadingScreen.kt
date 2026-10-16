@@ -54,19 +54,23 @@ import kotlin.math.PI
 import kotlin.math.max
 import kotlin.math.sin
 
-/** Chargement réel : la barre reflète les étapes exécutées ; animation d'échelle uniquement (pas de fondu). */
+/**
+ * Chargement réel : la barre reflète les étapes exécutées (progression déterministe). Les tuiles rebondissent en vague
+ * (écrasement + étirement), la barre est continue avec un reflet qui balaie ; aucun fondu.
+ */
 @Composable
 fun LoadingScreen(progress: Float, @StringRes stepLabel: Int, modifier: Modifier = Modifier) {
     val animated by animateFloatAsState(
         targetValue = progress,
-        animationSpec = tween(WgMotion.StandardMs, easing = FastOutSlowInEasing),
+        animationSpec = tween(WgMotion.SlowMs, easing = CubicBezierEasing(0.25f, 0.9f, 0.3f, 1f)),
         label = "loading-progress",
     )
+    val description = stringResource(R.string.loading_progress_description)
     Column(
         modifier = modifier
             .testTag("loading_screen")
             .fillMaxSize()
-            .background(WgColors.Cream)
+            .background(WgColors.Background)
             .windowInsetsPadding(WindowInsets.safeDrawing)
             .padding(WgSpacing.Xl),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -81,7 +85,18 @@ fun LoadingScreen(progress: Float, @StringRes stepLabel: Int, modifier: Modifier
             textAlign = TextAlign.Center,
         )
         Spacer(Modifier.height(WgSpacing.Lg))
-        ProgressTrack(animated)
+        ChunkyProgressBar(
+            fraction = animated,
+            modifier = Modifier
+                .fillMaxWidth(0.62f)
+                .semantics {
+                    contentDescription = description
+                    progressBarRangeInfo = ProgressBarRangeInfo(animated.coerceIn(0f, 1f), 0f..1f)
+                },
+            color = WgColors.Purple,
+            dark = WgColors.PurpleDark,
+            height = 16.dp,
+        )
         Spacer(Modifier.height(WgSpacing.Md))
         Text(
             text = stringResource(stepLabel),
@@ -92,40 +107,22 @@ fun LoadingScreen(progress: Float, @StringRes stepLabel: Int, modifier: Modifier
     }
 }
 
-@Composable
-private fun ProgressTrack(progress: Float) {
-    val description = stringResource(R.string.loading_progress_description)
-    Box(
-        modifier = Modifier
-            .fillMaxWidth(0.6f)
-            .height(10.dp)
-            .clip(RoundedCornerShape(WgRadius.Pill))
-            .background(WgColors.Outline)
-            .semantics {
-                contentDescription = description
-                progressBarRangeInfo = ProgressBarRangeInfo(progress.coerceIn(0f, 1f), 0f..1f)
-            },
-    ) {
-        Box(
-            Modifier
-                .fillMaxHeight()
-                .fillMaxWidth(progress.coerceIn(0f, 1f))
-                .clip(RoundedCornerShape(WgRadius.Pill))
-                .background(WgColors.Coral),
-        )
-    }
-}
-
-/** Grille 3×3 de lettres dont les tuiles « respirent » en vague (échelle). Statique si animations réduites. */
+/** Grille 3×3 de tuiles vives qui sautent en vague : écrasement au sol, étirement en l'air. Statique si animations réduites. */
 @Composable
 private fun LetterTiles() {
     val reduceMotion = rememberReduceMotion()
     val letters = stringResource(R.string.loading_tile_letters)
-    val palette = listOf(WgColors.Sun, WgColors.Coral, WgColors.Teal)
+    val palette = listOf(
+        WgColors.Yellow to WgColors.YellowDark,
+        WgColors.Pink to WgColors.PinkDark,
+        WgColors.Blue to WgColors.BlueDark,
+        WgColors.Green to WgColors.GreenDark,
+        WgColors.Purple to WgColors.PurpleDark,
+    )
     val phase: State<Float> = rememberInfiniteTransition(label = "tiles").animateFloat(
         initialValue = 0f,
         targetValue = 1f,
-        animationSpec = infiniteRepeatable(tween(1800, easing = LinearEasing), RepeatMode.Restart),
+        animationSpec = infiniteRepeatable(tween(1500, easing = LinearEasing), RepeatMode.Restart),
         label = "tile-phase",
     )
     Column(
@@ -136,26 +133,33 @@ private fun LetterTiles() {
             Row(horizontalArrangement = Arrangement.spacedBy(WgSpacing.Sm)) {
                 for (col in 0 until 3) {
                     val index = row * 3 + col
+                    val (face, lip) = palette[(row * 2 + col) % palette.size]
                     Box(
                         modifier = Modifier
                             .size(WgSize.Tile)
                             .graphicsLayer {
                                 if (!reduceMotion) {
-                                    val t = ((phase.value - index * 0.09f) % 1f + 1f) % 1f
-                                    val scale = 1f + 0.16f * max(0f, sin(t * 2f * PI.toFloat()))
-                                    scaleX = scale
-                                    scaleY = scale
+                                    // Saut : montée avec étirement, retombée avec écrasement.
+                                    val t = ((phase.value - index * 0.07f) % 1f + 1f) % 1f
+                                    val jump = max(0f, sin(t * PI.toFloat() * 1.6f)).let { if (t < 0.625f) it else 0f }
+                                    val landing = if (t in 0.625f..0.8f) sin((t - 0.625f) / 0.175f * PI.toFloat()) else 0f
+                                    translationY = -jump * 16.dp.toPx()
+                                    scaleY = 1f + 0.12f * jump - 0.16f * landing
+                                    scaleX = 1f - 0.07f * jump + 0.14f * landing
                                 }
-                            }
-                            .clip(RoundedCornerShape(WgRadius.Md))
-                            .background(palette[(row + col) % palette.size]),
-                        contentAlignment = Alignment.Center,
+                            },
                     ) {
-                        Text(
-                            text = letters.getOrNull(index)?.toString().orEmpty(),
-                            style = MaterialTheme.typography.titleLarge,
-                            color = WgColors.Ink,
-                        )
+                        Box(Modifier.fillMaxSize().padding(top = 4.dp).background(lip, RoundedCornerShape(WgRadius.Md)))
+                        Box(
+                            Modifier.fillMaxSize().padding(bottom = 4.dp).background(face, RoundedCornerShape(WgRadius.Md)),
+                            contentAlignment = Alignment.Center,
+                        ) {
+                            Text(
+                                text = letters.getOrNull(index)?.toString().orEmpty(),
+                                style = MaterialTheme.typography.titleLarge,
+                                color = if (face == WgColors.Yellow) WgColors.Ink else WgColors.White,
+                            )
+                        }
                     }
                 }
             }
