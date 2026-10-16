@@ -15,9 +15,12 @@ import com.motsmeles.game.domain.model.Level
 import com.motsmeles.game.domain.model.LevelCatalog
 import com.motsmeles.game.domain.ports.HapticEffect
 import com.motsmeles.game.domain.ports.Sound
+import com.motsmeles.game.domain.progress.AdMoment
 import com.motsmeles.game.domain.progress.LevelStatus
+import com.motsmeles.game.domain.progress.ReturnAdPolicy
 import com.motsmeles.game.domain.progress.ProgressRules
 import com.motsmeles.game.domain.settings.AppSettings
+import com.motsmeles.game.domain.ui.ChapterStatus
 import com.motsmeles.game.domain.usecases.GameUseCases
 import com.motsmeles.game.domain.usecases.VictoryResult
 import com.motsmeles.game.presentation.feedback.FeedbackController
@@ -53,6 +56,12 @@ class AppViewModel(private val container: AppContainer) : ViewModel() {
     private var useCases: GameUseCases? = null
     private var messageSeq = 0L
     private var gameToken = 0L
+
+    // Publicité de retour dans l'appli (horloge monotone : jamais l'heure civile du téléphone).
+    private var stoppedAtMillis: Long? = null
+    private var lastReturnAdAtMillis: Long? = null
+    private var stoppedWhileAdShowing = false
+    private var sessionStarted = false
 
     init {
         startup()
@@ -110,10 +119,12 @@ class AppViewModel(private val container: AppContainer) : ViewModel() {
                 stack = listOf(Screen.Home),
             )
         }
+        sessionStarted = true
     }
 
     private fun applySettings(settings: AppSettings) {
         container.audio.setSoundEffectsEnabled(settings.soundEnabled)
+        container.audio.setMusicEnabled(settings.musicEnabled)
         container.haptics.setEnabled(settings.hapticsEnabled)
     }
 
@@ -173,6 +184,20 @@ class AppViewModel(private val container: AppContainer) : ViewModel() {
         ProgressRules.currentLevel(catalog, _state.value.progress)?.let { launchLevel(it) }
     }
 
+    /**
+     * Tap sur un chapitre du carrousel d'accueil : le chapitre en cours ouvre son niveau en cours ;
+     * un chapitre terminé ou verrouillé répond par un court message (jamais de niveau gagné rejoué).
+     */
+    fun openChapter(chapterIndex: Int) {
+        val home = _state.value.home() ?: return
+        val card = home.chapters.firstOrNull { it.index == chapterIndex } ?: return
+        when (card.status) {
+            ChapterStatus.CURRENT -> card.currentLevel?.let { launchLevel(it) }
+            ChapterStatus.COMPLETED -> showMessage(R.string.msg_chapter_completed)
+            ChapterStatus.LOCKED -> showMessage(R.string.msg_chapter_locked)
+        }
+    }
+
     /** Tap sur un niveau du monument : seul le niveau disponible se lance. */
     fun openLevel(levelId: String) {
         val catalog = _state.value.catalog ?: return
@@ -196,8 +221,6 @@ class AppViewModel(private val container: AppContainer) : ViewModel() {
         _state.update { it.copy(busy = true) }
         viewModelScope.launch {
             try {
-                // Interstitiel éventuel (1 démarrage sur 2) AVANT d'ouvrir l'écran de jeu ; une erreur n'empêche jamais de jouer.
-                runCatching { cases.startLevel(level) }
                 val progress = container.progressRepository.read()
                 closeGame()
                 val token = ++gameToken
@@ -276,8 +299,39 @@ class AppViewModel(private val container: AppContainer) : ViewModel() {
         container.activityHolder.current?.let { container.consent.showPrivacyOptions(it) { } }
     }
 
-    fun onAppStarted() = container.audioEngine.onAppStarted()
-    fun onAppStopped() = container.audioEngine.onAppStopped()
+    fun onAppStarted() {
+        container.audioEngine.onAppStarted()
+        val stoppedAt = stoppedAtMillis ?: return
+        stoppedAtMillis = null
+        val now = container.clock.nowMillis()
+        val state = _state.value
+        val moment = AdMoment(
+            isFirstRender = state.phase != Phase.Ready,
+            isGridBeingTouched = activeGame?.isGridBeingTouched() == true,
+            isResolvingWin = state.stack.lastOrNull() is Screen.Result,
+            isSensitiveActionPending = state.busy,
+        )
+        val show = state.adsEnabled && ReturnAdPolicy.shouldShow(
+            awayMillis = now - stoppedAt,
+            sinceLastReturnAdMillis = lastReturnAdAtMillis?.let { now - it },
+            cameBackFromAd = stoppedWhileAdShowing,
+            sessionStarted = sessionStarted,
+            moment = moment,
+        )
+        stoppedWhileAdShowing = false
+        if (!show) return
+        viewModelScope.launch {
+            // Une publicité qui échoue, n'est pas prête ou est hors ligne ne bloque jamais le jeu.
+            val shown = runCatching { container.ads.showReturnAdIfReady() }.getOrDefault(false)
+            if (shown) lastReturnAdAtMillis = container.clock.nowMillis()
+        }
+    }
+
+    fun onAppStopped() {
+        container.audioEngine.onAppStopped()
+        stoppedAtMillis = container.clock.nowMillis()
+        stoppedWhileAdShowing = container.ads.isFullScreenAdShowing()
+    }
 
     override fun onCleared() {
         closeGame()
