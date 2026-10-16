@@ -82,7 +82,29 @@ object MonumentBuilder {
         }
 }
 
-/** Ce que l'accueil affiche : niveau en cours, progression vers le cadeau, solde d'indices. */
+enum class ChapterStatus { COMPLETED, CURRENT, LOCKED }
+
+/** Carte de chapitre du carrousel d'accueil. Toucher le chapitre courant ouvre son niveau en cours. */
+data class ChapterCard(
+    val index: Int,
+    val theme: LocalizedText,
+    val paletteKey: String,
+    val status: ChapterStatus,
+    val completedCount: Int,
+    val total: Int,
+    val starsEarned: Int,
+    val starsMax: Int,
+    /** Niveau en cours (renseigné seulement si [status] est [ChapterStatus.CURRENT]). */
+    val currentLevel: Level?,
+    val hasSnapshot: Boolean,
+    val trophyClaimable: Boolean,
+    val trophyClaimed: Boolean,
+) {
+    /** Progression continue 0..1 de la barre du chapitre. */
+    val fraction: Float get() = if (total == 0) 0f else completedCount.toFloat() / total
+}
+
+/** Ce que l'accueil affiche : chapitres (carrousel), niveau en cours, progression vers le trophée, solde d'indices. */
 data class HomeModel(
     val currentLevel: Level?,
     val currentChapter: Chapter?,
@@ -94,6 +116,10 @@ data class HomeModel(
     val hintBalance: Int,
     val allCompleted: Boolean,
     val hasSnapshot: Boolean,
+    /** Chapitres dans l'ordre, pour le carrousel. */
+    val chapters: List<ChapterCard> = emptyList(),
+    /** Page à afficher à l'ouverture : le chapitre courant (ou le dernier si tout est terminé). */
+    val startPage: Int = 0,
 )
 
 object HomeModelBuilder {
@@ -102,7 +128,34 @@ object HomeModelBuilder {
         val currentChapter = current?.let { catalog.chapterOf(it) }
         val claimable = catalog.chapters.sortedBy { it.index }.firstOrNull { ProgressRules.isGiftClaimable(catalog, progress, it.index) }
         val giftChapter = claimable ?: currentChapter ?: catalog.chapters.maxByOrNull { it.index }
+        val ordered = catalog.chapters.sortedBy { it.index }
+        val cards = ordered.map { chapter ->
+            val done = ProgressRules.chapterCompletedCount(catalog, progress, chapter.index)
+            val isCurrent = current != null && current.chapterIndex == chapter.index
+            val complete = ProgressRules.isChapterComplete(catalog, progress, chapter.index)
+            ChapterCard(
+                index = chapter.index,
+                theme = chapter.theme,
+                paletteKey = chapter.paletteKey,
+                status = when {
+                    isCurrent -> ChapterStatus.CURRENT
+                    complete -> ChapterStatus.COMPLETED
+                    else -> ChapterStatus.LOCKED
+                },
+                completedCount = done,
+                total = chapter.levels.size,
+                starsEarned = chapter.levels.sumOf { progress.completed[it.id]?.stars ?: 0 },
+                starsMax = chapter.levels.size * 3,
+                currentLevel = if (isCurrent) current else null,
+                hasSnapshot = isCurrent && current != null && ProgressRules.snapshotKey(current.id, language) in progress.inProgress,
+                trophyClaimable = ProgressRules.isGiftClaimable(catalog, progress, chapter.index),
+                trophyClaimed = chapter.index in progress.claimedGiftChapters,
+            )
+        }
+        val startPage = cards.indexOfFirst { it.status == ChapterStatus.CURRENT }.let { if (it >= 0) it else (cards.lastIndex).coerceAtLeast(0) }
         return HomeModel(
+            chapters = cards,
+            startPage = startPage,
             currentLevel = current,
             currentChapter = currentChapter,
             giftChapter = giftChapter,
