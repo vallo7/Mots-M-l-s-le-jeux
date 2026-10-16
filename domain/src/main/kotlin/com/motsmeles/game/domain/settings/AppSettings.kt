@@ -6,6 +6,7 @@ import com.motsmeles.game.domain.model.Language
 data class AppSettings(
     val language: Language? = null,
     val soundEnabled: Boolean = true,
+    val musicEnabled: Boolean = true,
     val hapticsEnabled: Boolean = true,
     val reduceMotion: Boolean = false,
     val largeText: Boolean = false,
