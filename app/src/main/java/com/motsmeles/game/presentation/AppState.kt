@@ -7,6 +7,8 @@ import com.motsmeles.game.domain.model.Language
 import com.motsmeles.game.domain.model.LevelCatalog
 import com.motsmeles.game.domain.progress.ProgressState
 import com.motsmeles.game.domain.settings.AppSettings
+import com.motsmeles.game.domain.ui.HomeModel
+import com.motsmeles.game.domain.ui.HomeModelBuilder
 import com.motsmeles.game.domain.usecases.VictoryResult
 
 sealed interface Screen {
@@ -47,3 +49,6 @@ data class AppState(
     /** Vrai pendant le lancement d'un niveau (évite les doubles lancements). */
     val busy: Boolean = false,
 )
+
+/** Modèle d'affichage de l'accueil (carrousel de chapitres), ou null tant que le catalogue n'est pas chargé. */
+fun AppState.home(): HomeModel? = catalog?.let { HomeModelBuilder.build(it, progress, language) }
