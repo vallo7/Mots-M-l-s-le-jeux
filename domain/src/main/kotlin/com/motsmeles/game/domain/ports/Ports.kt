@@ -37,11 +37,13 @@ interface AdProvider {
     /** null = une publicité récompensée est prête ; sinon la raison pour laquelle elle ne l'est pas. */
     suspend fun rewardedUnavailableReason(): UnavailableReason?
     suspend fun showRewarded(): RewardedAdResult
-    /** @return true si un interstitiel a effectivement été affiché. */
-    suspend fun showInterstitialIfReady(): Boolean
+    /** Publicité de retour dans l'appli. @return true si elle a effectivement été affichée. */
+    suspend fun showReturnAdIfReady(): Boolean
+    /** Vrai tant qu'une publicité plein écran est à l'écran (le retour qui suit n'est pas un retour « joueur »). */
+    fun isFullScreenAdShowing(): Boolean
 }
 
-enum class Sound { CLICK, SELECT_CELL, CORRECT, WRONG, HINT, GIFT, PROGRESS_UP, VICTORY, MENU_CHANGE, SUCCESS_GENERIC }
+enum class Sound { CLICK, SELECT_CELL, CORRECT, WRONG, HINT, GIFT, PROGRESS_UP, VICTORY, MENU_CHANGE, SUCCESS_GENERIC, SHUFFLE, SWIPE }
 
 interface AudioManager {
     fun play(sound: Sound)
