@@ -16,7 +16,7 @@
     <string name="cd_back">Retour</string>
     <string name="cd_restart">Recommencer le niveau</string>
     <string name="cd_close">Fermer</string>
-    <string name="cd_gift">Cadeau du chapitre</string>
+    <string name="cd_gift">Trophée du chapitre</string>
     <string name="cd_star_earned">Étoile obtenue</string>
     <string name="cd_star_missed">Étoile non obtenue</string>
     <string name="home_chapter_level">Chapitre %1$d · Niveau %2$d</string>
@@ -25,9 +25,9 @@
     <string name="home_all_done_title">Tous les niveaux sont terminés !</string>
     <string name="home_all_done_body">Reviens bientôt pour de nouveaux chapitres.</string>
     <string name="home_gift_progress">%1$d/%2$d</string>
-    <string name="home_gift_ready">Ton cadeau est prêt !</string>
-    <string name="home_gift_open">Ouvrir le cadeau</string>
-    <string name="home_gift_description">Cadeau du chapitre : %1$d niveaux terminés sur %2$d</string>
+    <string name="home_gift_ready">Ton trophée est prêt !</string>
+    <string name="home_gift_open">Récupérer le trophée</string>
+    <string name="home_gift_description">Trophée du chapitre : %1$d niveaux terminés sur %2$d</string>
     <string name="band_easy">Facile</string>
     <string name="band_medium">Moyen</string>
     <string name="band_hard">Difficile</string>
@@ -43,12 +43,9 @@
     <string name="dialog_quit_body">Ta progression est sauvegardée. Tu pourras reprendre plus tard.</string>
     <string name="dialog_quit_confirm">Quitter</string>
     <string name="dialog_stay">Rester</string>
-    <string name="dialog_restart_title">Recommencer le niveau ?</string>
-    <string name="dialog_restart_body">La grille et le chronomètre repartent de zéro.</string>
-    <string name="dialog_restart_confirm">Recommencer</string>
     <string name="dialog_cancel">Annuler</string>
     <string name="rewarded_title">Plus d\'indices</string>
-    <string name="rewarded_body">Regarde une courte vidéo pour gagner 1 ou 2 indices.</string>
+    <string name="rewarded_body">Regarde une courte vidéo pour gagner 1 indice.</string>
     <string name="rewarded_watch">Regarder la vidéo</string>
     <string name="rewarded_later">Plus tard</string>
     <string name="msg_hint_limit">Plus d\'indice possible sur ce niveau.</string>
@@ -56,7 +53,7 @@
     <string name="msg_hint_failed">Impossible d\'utiliser l\'indice. Réessaie.</string>
     <string name="msg_ad_offline">Tu es hors ligne : aucune vidéo disponible.</string>
     <string name="msg_ad_unavailable">Aucune vidéo disponible pour le moment.</string>
-    <string name="msg_ad_dismissed">Regarde la vidéo en entier pour gagner des indices.</string>
+    <string name="msg_ad_dismissed">Regarde la vidéo en entier pour gagner un indice.</string>
     <string name="msg_ad_duplicate">Cette récompense a déjà été accordée.</string>
     <string name="msg_level_completed">Niveau déjà terminé.</string>
     <string name="msg_level_locked">Termine d\'abord le niveau précédent.</string>
@@ -68,8 +65,8 @@
     <string name="monument_status_locked">Verrouillé</string>
     <string name="monument_level_description">Niveau %1$d, %2$s, %3$s, %4$s</string>
     <string name="monument_grid_size">%1$d×%1$d</string>
-    <string name="monument_gift_pending">Cadeau à la fin du chapitre</string>
-    <string name="monument_gift_claimed">Cadeau ouvert</string>
+    <string name="monument_gift_pending">Trophée à la fin du chapitre</string>
+    <string name="monument_gift_claimed">Trophée récupéré</string>
     <string name="settings_title">Paramètres</string>
     <string name="settings_language">Langue</string>
     <string name="settings_sound">Effets sonores</string>
@@ -104,7 +101,7 @@
     <string name="result_next">Niveau suivant</string>
     <string name="result_home">Accueil</string>
     <string name="result_monument">Monument</string>
-    <string name="result_gift_open">Ouvre ton cadeau</string>
+    <string name="result_gift_open">Récupère ton trophée</string>
     <string name="praise_nice">Nice!</string>
     <string name="praise_great">Great!</string>
     <string name="praise_awesome">Awesome!</string>
@@ -129,7 +126,20 @@
         <item quantity="other">+%1$d indices</item>
     </plurals>
     <plurals name="msg_gift_earned">
-        <item quantity="one">Cadeau : +%1$d indice</item>
-        <item quantity="other">Cadeau : +%1$d indices</item>
+        <item quantity="one">Trophée : +%1$d indice</item>
+        <item quantity="other">Trophée : +%1$d indices</item>
     </plurals>
+    <string name="home_chapter_title">Chapitre %1$d</string>
+    <string name="home_level_n">Niveau %1$d</string>
+    <string name="home_chapter_done">Chapitre terminé</string>
+    <string name="home_chapter_locked_hint">Termine le chapitre précédent pour le débloquer.</string>
+    <string name="home_chapter_stars">%1$d/%2$d</string>
+    <string name="home_trophy_claim">Récupérer le trophée</string>
+    <string name="msg_chapter_completed">Chapitre déjà terminé.</string>
+    <string name="msg_chapter_locked">Termine d\'abord le chapitre précédent.</string>
+    <string name="settings_music">Musique</string>
+    <string name="result_chapter_progress">Progression du chapitre %1$d</string>
+    <string name="rewarded_plus_one">+1</string>
+    <string name="monument_level_title">%1$d-%2$d  %3$s</string>
+    <string name="monument_level_a11y">Chapitre %1$d, niveau %2$d, %3$s, %4$s</string>
 </resources>
