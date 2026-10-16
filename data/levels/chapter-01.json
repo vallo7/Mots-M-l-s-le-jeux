@@ -1,0 +1,1354 @@
+{
+ "schemaVersion": 1,
+ "id": "chapter-01",
+ "index": 1,
+ "paletteKey": "meadow",
+ "theme": {
+  "fr": "Nature",
+  "en": "Nature"
+ },
+ "levels": [
+  {
+   "id": "c1-l01",
+   "number": 1,
+   "theme": {
+    "fr": "Plage",
+    "en": "Beach"
+   },
+   "visualStyle": "STYLE_1",
+   "gridSize": 3,
+   "difficulty": {
+    "tier": 1,
+    "ambiguity": 0.0,
+    "score": 23
+   },
+   "hints": {
+    "maxPerLevel": 2
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "MIE",
+      "ELE",
+      "REU"
+     ],
+     "words": [
+      {
+       "display": "MER",
+       "letters": "MER",
+       "row": 0,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "ÎLE",
+       "letters": "ILE",
+       "row": 0,
+       "col": 1,
+       "direction": "S"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "SSA",
+      "UEI",
+      "NAM"
+     ],
+     "words": [
+      {
+       "display": "SEA",
+       "letters": "SEA",
+       "row": 0,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "SUN",
+       "letters": "SUN",
+       "row": 0,
+       "col": 0,
+       "direction": "S"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c1-l02",
+   "number": 2,
+   "theme": {
+    "fr": "Jardin",
+    "en": "Garden"
+   },
+   "visualStyle": "STYLE_1",
+   "gridSize": 3,
+   "difficulty": {
+    "tier": 1,
+    "ambiguity": 0.1,
+    "score": 28
+   },
+   "hints": {
+    "maxPerLevel": 2
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "PIN",
+      "RHU",
+      "EAU"
+     ],
+     "words": [
+      {
+       "display": "PRÉ",
+       "letters": "PRE",
+       "row": 0,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "PIN",
+       "letters": "PIN",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "EAU",
+       "letters": "EAU",
+       "row": 2,
+       "col": 0,
+       "direction": "E"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "BUG",
+      "ELM",
+      "EAN"
+     ],
+     "words": [
+      {
+       "display": "BEE",
+       "letters": "BEE",
+       "row": 0,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "BUG",
+       "letters": "BUG",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "ELM",
+       "letters": "ELM",
+       "row": 1,
+       "col": 0,
+       "direction": "E"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c1-l03",
+   "number": 3,
+   "theme": {
+    "fr": "Forêt",
+    "en": "Forest"
+   },
+   "visualStyle": "STYLE_1",
+   "gridSize": 4,
+   "difficulty": {
+    "tier": 1,
+    "ambiguity": 0.2,
+    "score": 36
+   },
+   "hints": {
+    "maxPerLevel": 3
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "BLCP",
+      "OOEI",
+      "IURN",
+      "SPFB"
+     ],
+     "words": [
+      {
+       "display": "LOUP",
+       "letters": "LOUP",
+       "row": 0,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "BOIS",
+       "letters": "BOIS",
+       "row": 0,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "CERF",
+       "letters": "CERF",
+       "row": 0,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "PIN",
+       "letters": "PIN",
+       "row": 0,
+       "col": 3,
+       "direction": "S"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "OBLT",
+      "AEER",
+      "KAAE",
+      "ARFE"
+     ],
+     "words": [
+      {
+       "display": "BEAR",
+       "letters": "BEAR",
+       "row": 0,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "TREE",
+       "letters": "TREE",
+       "row": 0,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "LEAF",
+       "letters": "LEAF",
+       "row": 0,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "OAK",
+       "letters": "OAK",
+       "row": 0,
+       "col": 0,
+       "direction": "S"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c1-l04",
+   "number": 4,
+   "theme": {
+    "fr": "Montagne",
+    "en": "Mountain"
+   },
+   "visualStyle": "STYLE_2",
+   "gridSize": 4,
+   "difficulty": {
+    "tier": 2,
+    "ambiguity": 0.3,
+    "score": 46
+   },
+   "hints": {
+    "maxPerLevel": 3
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "CPIR",
+      "LSIO",
+      "AKIC",
+      "CIME"
+     ],
+     "words": [
+      {
+       "display": "LAC",
+       "letters": "LAC",
+       "row": 1,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "SKI",
+       "letters": "SKI",
+       "row": 1,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "ROC",
+       "letters": "ROC",
+       "row": 0,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "PIC",
+       "letters": "PIC",
+       "row": 0,
+       "col": 1,
+       "direction": "SE"
+      },
+      {
+       "display": "CIME",
+       "letters": "CIME",
+       "row": 3,
+       "col": 0,
+       "direction": "E"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "YAKP",
+      "SICE",
+      "KEIA",
+      "IELK"
+     ],
+     "words": [
+      {
+       "display": "ICE",
+       "letters": "ICE",
+       "row": 1,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "SKI",
+       "letters": "SKI",
+       "row": 1,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "ELK",
+       "letters": "ELK",
+       "row": 3,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "YAK",
+       "letters": "YAK",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "PEAK",
+       "letters": "PEAK",
+       "row": 0,
+       "col": 3,
+       "direction": "S"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c1-l05",
+   "number": 5,
+   "theme": {
+    "fr": "Océan",
+    "en": "Ocean"
+   },
+   "visualStyle": "STYLE_2",
+   "gridSize": 6,
+   "difficulty": {
+    "tier": 2,
+    "ambiguity": 0.4,
+    "score": 54
+   },
+   "hints": {
+    "maxPerLevel": 3
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "CRCERO",
+      "TSONOC",
+      "HCRABE",
+      "OVAGUE",
+      "NLISTI",
+      "OPLAGE"
+     ],
+     "words": [
+      {
+       "display": "VAGUE",
+       "letters": "VAGUE",
+       "row": 3,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "CRABE",
+       "letters": "CRABE",
+       "row": 2,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "CORAIL",
+       "letters": "CORAIL",
+       "row": 0,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "PLAGE",
+       "letters": "PLAGE",
+       "row": 5,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "THON",
+       "letters": "THON",
+       "row": 1,
+       "col": 0,
+       "direction": "S"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "AWTERO",
+      "LWALSO",
+      "OSHVHK",
+      "CHLAEV",
+      "CORALN",
+      "CRABLE"
+     ],
+     "words": [
+      {
+       "display": "WAVE",
+       "letters": "WAVE",
+       "row": 0,
+       "col": 1,
+       "direction": "SE"
+      },
+      {
+       "display": "CRAB",
+       "letters": "CRAB",
+       "row": 5,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "SHELL",
+       "letters": "SHELL",
+       "row": 1,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "display": "CORAL",
+       "letters": "CORAL",
+       "row": 4,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "WHALE",
+       "letters": "WHALE",
+       "row": 1,
+       "col": 1,
+       "direction": "SE"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c1-l06",
+   "number": 6,
+   "theme": {
+    "fr": "Animaux",
+    "en": "Animals"
+   },
+   "visualStyle": "STYLE_2",
+   "gridSize": 6,
+   "difficulty": {
+    "tier": 2,
+    "ambiguity": 0.5,
+    "score": 60
+   },
+   "hints": {
+    "maxPerLevel": 3
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "ESLPGD",
+      "ZIAATN",
+      "ENPNIN",
+      "BGIDGR",
+      "RENARD",
+      "ESIIEN"
+     ],
+     "words": [
+      {
+       "display": "ZÈBRE",
+       "letters": "ZEBRE",
+       "row": 1,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "PANDA",
+       "letters": "PANDA",
+       "row": 0,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "TIGRE",
+       "letters": "TIGRE",
+       "row": 1,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "display": "SINGE",
+       "letters": "SINGE",
+       "row": 0,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "LAPIN",
+       "letters": "LAPIN",
+       "row": 0,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "RENARD",
+       "letters": "RENARD",
+       "row": 4,
+       "col": 0,
+       "direction": "E"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "MONKEY",
+      "TPERNL",
+      "RIARHL",
+      "IZGNIA",
+      "AWLEDM",
+      "AZEBRA"
+     ],
+     "words": [
+      {
+       "display": "ZEBRA",
+       "letters": "ZEBRA",
+       "row": 5,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "PANDA",
+       "letters": "PANDA",
+       "row": 1,
+       "col": 1,
+       "direction": "SE"
+      },
+      {
+       "display": "TIGER",
+       "letters": "TIGER",
+       "row": 1,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "MONKEY",
+       "letters": "MONKEY",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "LLAMA",
+       "letters": "LLAMA",
+       "row": 1,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "display": "EAGLE",
+       "letters": "EAGLE",
+       "row": 1,
+       "col": 2,
+       "direction": "S"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c1-l07",
+   "number": 7,
+   "theme": {
+    "fr": "Fruits",
+    "en": "Fruits"
+   },
+   "visualStyle": "STYLE_3",
+   "gridSize": 7,
+   "difficulty": {
+    "tier": 3,
+    "ambiguity": 0.55,
+    "score": 73
+   },
+   "hints": {
+    "maxPerLevel": 3
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "NMBARAH",
+      "OFAAANE",
+      "PRNNCLS",
+      "EAAAGSI",
+      "CINNKUR",
+      "HSEAGBE",
+      "EEWSOEC"
+     ],
+     "words": [
+      {
+       "display": "ANANAS",
+       "letters": "ANANAS",
+       "row": 1,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "MANGUE",
+       "letters": "MANGUE",
+       "row": 0,
+       "col": 1,
+       "direction": "SE"
+      },
+      {
+       "display": "BANANE",
+       "letters": "BANANE",
+       "row": 0,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "CERISE",
+       "letters": "CERISE",
+       "row": 6,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "display": "ORANGE",
+       "letters": "ORANGE",
+       "row": 1,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "FRAISE",
+       "letters": "FRAISE",
+       "row": 1,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "PÊCHE",
+       "letters": "PECHE",
+       "row": 2,
+       "col": 0,
+       "direction": "S"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "PAPAYAP",
+      "EYQBRAA",
+      "ASLARMD",
+      "CRENEAA",
+      "HNMAHNA",
+      "EAONCGA",
+      "EGNAROC"
+     ],
+     "words": [
+      {
+       "display": "ORANGE",
+       "letters": "ORANGE",
+       "row": 6,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "BANANA",
+       "letters": "BANANA",
+       "row": 1,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "CHERRY",
+       "letters": "CHERRY",
+       "row": 5,
+       "col": 4,
+       "direction": "N"
+      },
+      {
+       "display": "MANGO",
+       "letters": "MANGO",
+       "row": 2,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "display": "PEACH",
+       "letters": "PEACH",
+       "row": 0,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "LEMON",
+       "letters": "LEMON",
+       "row": 2,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "PAPAYA",
+       "letters": "PAPAYA",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c1-l08",
+   "number": 8,
+   "theme": {
+    "fr": "Météo",
+    "en": "Weather"
+   },
+   "visualStyle": "STYLE_3",
+   "gridSize": 8,
+   "difficulty": {
+    "tier": 3,
+    "ambiguity": 0.6,
+    "score": 80
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "ERRENNOT",
+      "NBATORSR",
+      "IRFESEER",
+      "UIAPSSEO",
+      "RALMURNO",
+      "BLEEOERV",
+      "OCETMVEU",
+      "VERGLASE"
+     ],
+     "words": [
+      {
+       "display": "TONNERRE",
+       "letters": "TONNERRE",
+       "row": 0,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "TEMPÊTE",
+       "letters": "TEMPETE",
+       "row": 6,
+       "col": 3,
+       "direction": "N"
+      },
+      {
+       "display": "ÉCLAIR",
+       "letters": "ECLAIR",
+       "row": 7,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "BRUINE",
+       "letters": "BRUINE",
+       "row": 5,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "AVERSE",
+       "letters": "AVERSE",
+       "row": 7,
+       "col": 5,
+       "direction": "N"
+      },
+      {
+       "display": "RAFALE",
+       "letters": "RAFALE",
+       "row": 0,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "VERGLAS",
+       "letters": "VERGLAS",
+       "row": 7,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "MOUSSON",
+       "letters": "MOUSSON",
+       "row": 6,
+       "col": 4,
+       "direction": "N"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "BLIZZARD",
+      "NRCBMZNR",
+      "OEZEERBN",
+      "SDRIZZLE",
+      "SNOOSNOM",
+      "SUNSHINE",
+      "SHOWEREE",
+      "BTORNADO"
+     ],
+     "words": [
+      {
+       "display": "BLIZZARD",
+       "letters": "BLIZZARD",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "SUNSHINE",
+       "letters": "SUNSHINE",
+       "row": 5,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "THUNDER",
+       "letters": "THUNDER",
+       "row": 7,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "TORNADO",
+       "letters": "TORNADO",
+       "row": 7,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "DRIZZLE",
+       "letters": "DRIZZLE",
+       "row": 3,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "SHOWER",
+       "letters": "SHOWER",
+       "row": 6,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "BREEZE",
+       "letters": "BREEZE",
+       "row": 2,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "MONSOON",
+       "letters": "MONSOON",
+       "row": 4,
+       "col": 7,
+       "direction": "W"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c1-l09",
+   "number": 9,
+   "theme": {
+    "fr": "Fleurs",
+    "en": "Flowers"
+   },
+   "visualStyle": "STYLE_3",
+   "gridSize": 10,
+   "difficulty": {
+    "tier": 3,
+    "ambiguity": 0.7,
+    "score": 93
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "EDNAVALALV",
+      "TOCILEUQOC",
+      "IUEIISICUT",
+      "REPILUTRGE",
+      "EEDIHCROCU",
+      "UCRJASMING",
+      "GNARCISSEU",
+      "RORIEBTEUM",
+      "AGEENIOVIP",
+      "MPUTEHPCSM"
+     ],
+     "words": [
+      {
+       "display": "MARGUERITE",
+       "letters": "MARGUERITE",
+       "row": 9,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "COQUELICOT",
+       "letters": "COQUELICOT",
+       "row": 1,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "ORCHIDÉE",
+       "letters": "ORCHIDEE",
+       "row": 4,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "HIBISCUS",
+       "letters": "HIBISCUS",
+       "row": 9,
+       "col": 5,
+       "direction": "N"
+      },
+      {
+       "display": "NARCISSE",
+       "letters": "NARCISSE",
+       "row": 6,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "LAVANDE",
+       "letters": "LAVANDE",
+       "row": 0,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "PIVOINE",
+       "letters": "PIVOINE",
+       "row": 8,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "JASMIN",
+       "letters": "JASMIN",
+       "row": 5,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "TULIPE",
+       "letters": "TULIPE",
+       "row": 3,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "MUGUET",
+       "letters": "MUGUET",
+       "row": 7,
+       "col": 9,
+       "direction": "N"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "EPHIBISCUS",
+      "ELARLTULIP",
+      "PJASMINEFM",
+      "OLIDOFFADA",
+      "PSRVIOLETG",
+      "PCOAEIOOKN",
+      "YONIJZWORO",
+      "AIREDNEVAL",
+      "DADIHCROOI",
+      "LIEJIAQPDA"
+     ],
+     "words": [
+      {
+       "display": "SUNFLOWER",
+       "letters": "SUNFLOWER",
+       "row": 0,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "display": "DAFFODIL",
+       "letters": "DAFFODIL",
+       "row": 3,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "LAVENDER",
+       "letters": "LAVENDER",
+       "row": 7,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "HIBISCUS",
+       "letters": "HIBISCUS",
+       "row": 0,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "MAGNOLIA",
+       "letters": "MAGNOLIA",
+       "row": 2,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "JASMINE",
+       "letters": "JASMINE",
+       "row": 2,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "ORCHID",
+       "letters": "ORCHID",
+       "row": 8,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "VIOLET",
+       "letters": "VIOLET",
+       "row": 4,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "TULIP",
+       "letters": "TULIP",
+       "row": 1,
+       "col": 5,
+       "direction": "E"
+      },
+      {
+       "display": "POPPY",
+       "letters": "POPPY",
+       "row": 2,
+       "col": 0,
+       "direction": "S"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c1-l10",
+   "number": 10,
+   "theme": {
+    "fr": "Le grand air",
+    "en": "The great outdoors"
+   },
+   "visualStyle": "FINAL",
+   "gridSize": 12,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 1.0,
+    "score": 123
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "EMETSYSOCEEE",
+      "IDTEDALACSEN",
+      "REISSREITNES",
+      "ENSPROMENADE",
+      "RNRIPANORAMA",
+      "UNEIEEDEAASN",
+      "TAVSTNERROTM",
+      "NOITATEGEVAT",
+      "EODRPRAIRIES",
+      "VMONTAGNARDL",
+      "ASITNEMEPMAC",
+      "SNBGLACIERSS"
+     ],
+     "words": [
+      {
+       "display": "BIODIVERSITÉ",
+       "letters": "BIODIVERSITE",
+       "row": 11,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "ÉCOSYSTÈME",
+       "letters": "ECOSYSTEME",
+       "row": 0,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "VÉGÉTATION",
+       "letters": "VEGETATION",
+       "row": 7,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "MONTAGNARD",
+       "letters": "MONTAGNARD",
+       "row": 9,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "RANDONNÉE",
+       "letters": "RANDONNEE",
+       "row": 8,
+       "col": 3,
+       "direction": "NE"
+      },
+      {
+       "display": "CAMPEMENT",
+       "letters": "CAMPEMENT",
+       "row": 10,
+       "col": 11,
+       "direction": "W"
+      },
+      {
+       "display": "PROMENADE",
+       "letters": "PROMENADE",
+       "row": 3,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "ESCALADE",
+       "letters": "ESCALADE",
+       "row": 1,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "AVENTURE",
+       "letters": "AVENTURE",
+       "row": 10,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "SENTIERS",
+       "letters": "SENTIERS",
+       "row": 2,
+       "col": 11,
+       "direction": "W"
+      },
+      {
+       "display": "GLACIERS",
+       "letters": "GLACIERS",
+       "row": 11,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "PANORAMA",
+       "letters": "PANORAMA",
+       "row": 4,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "TORRENTS",
+       "letters": "TORRENTS",
+       "row": 6,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "PRAIRIES",
+       "letters": "PRAIRIES",
+       "row": 8,
+       "col": 4,
+       "direction": "E"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "NCNSWODAEMUS",
+      "NEWATERFALLM",
+      "THGILNOOMLUE",
+      "DAEHLIARTIMT",
+      "INWILDLIFERS",
+      "BIODIVERSITY",
+      "RRAINFORESTS",
+      "EVERGREENLRO",
+      "AADVENTUREVC",
+      "WENGLACIERSE",
+      "ERIFPMACNMES",
+      "RRNIATNUOMEF"
+     ],
+     "words": [
+      {
+       "display": "BIODIVERSITY",
+       "letters": "BIODIVERSITY",
+       "row": 5,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "WILDERNESS",
+       "letters": "WILDERNESS",
+       "row": 1,
+       "col": 2,
+       "direction": "SE"
+      },
+      {
+       "display": "RAINFOREST",
+       "letters": "RAINFOREST",
+       "row": 6,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "WATERFALL",
+       "letters": "WATERFALL",
+       "row": 1,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "ADVENTURE",
+       "letters": "ADVENTURE",
+       "row": 8,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "ECOSYSTEM",
+       "letters": "ECOSYSTEM",
+       "row": 9,
+       "col": 11,
+       "direction": "N"
+      },
+      {
+       "display": "MOONLIGHT",
+       "letters": "MOONLIGHT",
+       "row": 2,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "EVERGREEN",
+       "letters": "EVERGREEN",
+       "row": 7,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "TRAILHEAD",
+       "letters": "TRAILHEAD",
+       "row": 3,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "CAMPFIRE",
+       "letters": "CAMPFIRE",
+       "row": 10,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "MOUNTAIN",
+       "letters": "MOUNTAIN",
+       "row": 11,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "WILDLIFE",
+       "letters": "WILDLIFE",
+       "row": 4,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "MEADOWS",
+       "letters": "MEADOWS",
+       "row": 0,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "GLACIERS",
+       "letters": "GLACIERS",
+       "row": 9,
+       "col": 3,
+       "direction": "E"
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

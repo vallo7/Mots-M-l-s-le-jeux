@@ -1,0 +1,1694 @@
+{
+ "schemaVersion": 1,
+ "id": "chapter-02",
+ "index": 2,
+ "paletteKey": "dusk",
+ "theme": {
+  "fr": "Voyage",
+  "en": "Travel"
+ },
+ "levels": [
+  {
+   "id": "c2-l01",
+   "number": 1,
+   "theme": {
+    "fr": "Transports",
+    "en": "Transport"
+   },
+   "visualStyle": "STYLE_2",
+   "gridSize": 6,
+   "difficulty": {
+    "tier": 3,
+    "ambiguity": 0.3,
+    "score": 62
+   },
+   "hints": {
+    "maxPerLevel": 3
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "EECANZ",
+      "AVIONR",
+      "NIARTO",
+      "UAETAB",
+      "YRREFT",
+      "NOIMAC"
+     ],
+     "words": [
+      {
+       "display": "AVION",
+       "letters": "AVION",
+       "row": 1,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "TRAIN",
+       "letters": "TRAIN",
+       "row": 2,
+       "col": 4,
+       "direction": "W"
+      },
+      {
+       "display": "MÉTRO",
+       "letters": "METRO",
+       "row": 5,
+       "col": 3,
+       "direction": "N"
+      },
+      {
+       "display": "BATEAU",
+       "letters": "BATEAU",
+       "row": 3,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "CAMION",
+       "letters": "CAMION",
+       "row": 5,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "FERRY",
+       "letters": "FERRY",
+       "row": 4,
+       "col": 4,
+       "direction": "W"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "YKCURT",
+      "RPLANE",
+      "RRLSIK",
+      "EYNRAC",
+      "FMETRO",
+      "RBNOTR"
+     ],
+     "words": [
+      {
+       "display": "PLANE",
+       "letters": "PLANE",
+       "row": 1,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "TRAIN",
+       "letters": "TRAIN",
+       "row": 5,
+       "col": 4,
+       "direction": "N"
+      },
+      {
+       "display": "METRO",
+       "letters": "METRO",
+       "row": 4,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "TRUCK",
+       "letters": "TRUCK",
+       "row": 0,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "FERRY",
+       "letters": "FERRY",
+       "row": 4,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "ROCKET",
+       "letters": "ROCKET",
+       "row": 5,
+       "col": 5,
+       "direction": "N"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c2-l02",
+   "number": 2,
+   "theme": {
+    "fr": "Hôtel",
+    "en": "Hotel"
+   },
+   "visualStyle": "STYLE_2",
+   "gridSize": 7,
+   "difficulty": {
+    "tier": 3,
+    "ambiguity": 0.4,
+    "score": 70
+   },
+   "hints": {
+    "maxPerLevel": 3
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "PUUNSNC",
+      "EIRNECH",
+      "GCSORLA",
+      "AAUCVIM",
+      "GUILIEB",
+      "AETACNR",
+      "BXEBETE"
+     ],
+     "words": [
+      {
+       "display": "SUITE",
+       "letters": "SUITE",
+       "row": 2,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "CLIENT",
+       "letters": "CLIENT",
+       "row": 1,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "display": "BAGAGE",
+       "letters": "BAGAGE",
+       "row": 6,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "BALCON",
+       "letters": "BALCON",
+       "row": 6,
+       "col": 3,
+       "direction": "N"
+      },
+      {
+       "display": "PISCINE",
+       "letters": "PISCINE",
+       "row": 0,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "CHAMBRE",
+       "letters": "CHAMBRE",
+       "row": 0,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "display": "SERVICE",
+       "letters": "SERVICE",
+       "row": 0,
+       "col": 4,
+       "direction": "S"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "REWOHSY",
+      "YNOCLAB",
+      "GBLEYGB",
+      "UELIRRO",
+      "ETIUSIL",
+      "SOPEMXS",
+      "TOWELEN"
+     ],
+     "words": [
+      {
+       "display": "SUITE",
+       "letters": "SUITE",
+       "row": 4,
+       "col": 4,
+       "direction": "W"
+      },
+      {
+       "display": "GUEST",
+       "letters": "GUEST",
+       "row": 2,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "LOBBY",
+       "letters": "LOBBY",
+       "row": 4,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "display": "TOWEL",
+       "letters": "TOWEL",
+       "row": 6,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "BALCONY",
+       "letters": "BALCONY",
+       "row": 1,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "PILLOW",
+       "letters": "PILLOW",
+       "row": 5,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "SHOWER",
+       "letters": "SHOWER",
+       "row": 0,
+       "col": 5,
+       "direction": "W"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c2-l03",
+   "number": 3,
+   "theme": {
+    "fr": "Pays",
+    "en": "Countries"
+   },
+   "visualStyle": "STYLE_2",
+   "gridSize": 7,
+   "difficulty": {
+    "tier": 3,
+    "ambiguity": 0.5,
+    "score": 72
+   },
+   "hints": {
+    "maxPerLevel": 3
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "BEILATI",
+      "RNOPAJT",
+      "EGYPTEA",
+      "SADANAC",
+      "IPAESME",
+      "LSOSZRI",
+      "MEXIQUE"
+     ],
+     "words": [
+      {
+       "display": "BRÉSIL",
+       "letters": "BRESIL",
+       "row": 0,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "JAPON",
+       "letters": "JAPON",
+       "row": 1,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "CANADA",
+       "letters": "CANADA",
+       "row": 3,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "ESPAGNE",
+       "letters": "ESPAGNE",
+       "row": 6,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "ITALIE",
+       "letters": "ITALIE",
+       "row": 0,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "MEXIQUE",
+       "letters": "MEXIQUE",
+       "row": 6,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "ÉGYPTE",
+       "letters": "EGYPTE",
+       "row": 2,
+       "col": 0,
+       "direction": "E"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "TRSPAIN",
+      "PNBCKPA",
+      "YCRSRTP",
+      "GCANADA",
+      "ENZCELJ",
+      "OCIXEME",
+      "WYLATIX"
+     ],
+     "words": [
+      {
+       "display": "BRAZIL",
+       "letters": "BRAZIL",
+       "row": 1,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "JAPAN",
+       "letters": "JAPAN",
+       "row": 4,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "display": "CANADA",
+       "letters": "CANADA",
+       "row": 3,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "SPAIN",
+       "letters": "SPAIN",
+       "row": 0,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "ITALY",
+       "letters": "ITALY",
+       "row": 6,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "MEXICO",
+       "letters": "MEXICO",
+       "row": 5,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "EGYPT",
+       "letters": "EGYPT",
+       "row": 4,
+       "col": 0,
+       "direction": "N"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c2-l04",
+   "number": 4,
+   "theme": {
+    "fr": "Monuments",
+    "en": "Landmarks"
+   },
+   "visualStyle": "STYLE_3",
+   "gridSize": 8,
+   "difficulty": {
+    "tier": 3,
+    "ambiguity": 0.55,
+    "score": 79
+   },
+   "hints": {
+    "maxPerLevel": 3
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "PEEUQSOM",
+      "PYCAQOTM",
+      "TERRNWXM",
+      "RCHATEAU",
+      "AELPMETS",
+      "APALAISE",
+      "EEPAGODE",
+      "ICOLISEE"
+     ],
+     "words": [
+      {
+       "display": "PYRAMIDE",
+       "letters": "PYRAMIDE",
+       "row": 0,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "COLISÉE",
+       "letters": "COLISEE",
+       "row": 7,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "CHÂTEAU",
+       "letters": "CHATEAU",
+       "row": 3,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "MOSQUÉE",
+       "letters": "MOSQUEE",
+       "row": 0,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "PAGODE",
+       "letters": "PAGODE",
+       "row": 6,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "PALAIS",
+       "letters": "PALAIS",
+       "row": 5,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "MUSÉE",
+       "letters": "MUSEE",
+       "row": 2,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "TEMPLE",
+       "letters": "TEMPLE",
+       "row": 4,
+       "col": 6,
+       "direction": "W"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "MUSEUMOM",
+      "PMSLSEEO",
+      "AYETEEUN",
+      "LARSLMTU",
+      "AMTAPRAM",
+      "CURCMTTE",
+      "ECOPEISN",
+      "ESFYTTDT"
+     ],
+     "words": [
+      {
+       "display": "PYRAMID",
+       "letters": "PYRAMID",
+       "row": 1,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "MONUMENT",
+       "letters": "MONUMENT",
+       "row": 0,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "FORTRESS",
+       "letters": "FORTRESS",
+       "row": 7,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "CASTLE",
+       "letters": "CASTLE",
+       "row": 5,
+       "col": 3,
+       "direction": "N"
+      },
+      {
+       "display": "TEMPLE",
+       "letters": "TEMPLE",
+       "row": 7,
+       "col": 4,
+       "direction": "N"
+      },
+      {
+       "display": "MUSEUM",
+       "letters": "MUSEUM",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "PALACE",
+       "letters": "PALACE",
+       "row": 1,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "STATUE",
+       "letters": "STATUE",
+       "row": 6,
+       "col": 6,
+       "direction": "N"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c2-l05",
+   "number": 5,
+   "theme": {
+    "fr": "Cuisine du monde",
+    "en": "World food"
+   },
+   "visualStyle": "STYLE_3",
+   "gridSize": 8,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.6,
+    "score": 86
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "TIRILBLR",
+      "ABPEKAET",
+      "GUAUNKFN",
+      "IREDFLAN",
+      "NRLNAALA",
+      "EILOIVAR",
+      "OTAFIAFT",
+      "COUSCOUS"
+     ],
+     "words": [
+      {
+       "display": "COUSCOUS",
+       "letters": "COUSCOUS",
+       "row": 7,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "BURRITO",
+       "letters": "BURRITO",
+       "row": 1,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "RAVIOLI",
+       "letters": "RAVIOLI",
+       "row": 5,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "FALAFEL",
+       "letters": "FALAFEL",
+       "row": 6,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "display": "BAKLAVA",
+       "letters": "BAKLAVA",
+       "row": 0,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "display": "PAELLA",
+       "letters": "PAELLA",
+       "row": 1,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "TAGINE",
+       "letters": "TAGINE",
+       "row": 0,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "FONDUE",
+       "letters": "FONDUE",
+       "row": 6,
+       "col": 3,
+       "direction": "N"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "TSOHCAND",
+      "POTIRRUB",
+      "RARNHMOY",
+      "LEETPAHR",
+      "AACLIELR",
+      "NIIALLNU",
+      "ANGASALC",
+      "GOULASHA"
+     ],
+     "words": [
+      {
+       "display": "DUMPLING",
+       "letters": "DUMPLING",
+       "row": 0,
+       "col": 7,
+       "direction": "SW"
+      },
+      {
+       "display": "TORTILLA",
+       "letters": "TORTILLA",
+       "row": 0,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "LASAGNA",
+       "letters": "LASAGNA",
+       "row": 6,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "GOULASH",
+       "letters": "GOULASH",
+       "row": 7,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "BURRITO",
+       "letters": "BURRITO",
+       "row": 1,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "PAELLA",
+       "letters": "PAELLA",
+       "row": 1,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "NACHOS",
+       "letters": "NACHOS",
+       "row": 0,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "CURRY",
+       "letters": "CURRY",
+       "row": 6,
+       "col": 7,
+       "direction": "N"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c2-l06",
+   "number": 6,
+   "theme": {
+    "fr": "Aéroport",
+    "en": "Airport"
+   },
+   "visualStyle": "STYLE_3",
+   "gridSize": 8,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.7,
+    "score": 88
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "LANIMRET",
+      "EEHREENS",
+      "DRBNMGIE",
+      "OOANXABG",
+      "UNRGGSRA",
+      "AEAANSUG",
+      "NFBOIATA",
+      "ETOLIPHB"
+     ],
+     "words": [
+      {
+       "display": "PASSAGER",
+       "letters": "PASSAGER",
+       "row": 7,
+       "col": 5,
+       "direction": "N"
+      },
+      {
+       "display": "AÉRONEF",
+       "letters": "AERONEF",
+       "row": 0,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "TERMINAL",
+       "letters": "TERMINAL",
+       "row": 0,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "BAGAGES",
+       "letters": "BAGAGES",
+       "row": 7,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "TURBINE",
+       "letters": "TURBINE",
+       "row": 6,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "display": "DOUANE",
+       "letters": "DOUANE",
+       "row": 2,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "HANGAR",
+       "letters": "HANGAR",
+       "row": 7,
+       "col": 6,
+       "direction": "NW"
+      },
+      {
+       "display": "PILOTE",
+       "letters": "PILOTE",
+       "row": 7,
+       "col": 5,
+       "direction": "W"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "RCUSTOMS",
+      "AFFOEKAT",
+      "GNIDRAOB",
+      "NNIOMNMI",
+      "ANEOIAIL",
+      "HYAWNURO",
+      "LUGGAGER",
+      "OAIRLINE"
+     ],
+     "words": [
+      {
+       "display": "BOARDING",
+       "letters": "BOARDING",
+       "row": 2,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "TERMINAL",
+       "letters": "TERMINAL",
+       "row": 0,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "display": "AIRLINE",
+       "letters": "AIRLINE",
+       "row": 7,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "LUGGAGE",
+       "letters": "LUGGAGE",
+       "row": 6,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "CUSTOMS",
+       "letters": "CUSTOMS",
+       "row": 0,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "TAKEOFF",
+       "letters": "TAKEOFF",
+       "row": 1,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "HANGAR",
+       "letters": "HANGAR",
+       "row": 5,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "RUNWAY",
+       "letters": "RUNWAY",
+       "row": 5,
+       "col": 6,
+       "direction": "W"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c2-l07",
+   "number": 7,
+   "theme": {
+    "fr": "Mers et îles",
+    "en": "Seas and islands"
+   },
+   "visualStyle": "STYLE_1",
+   "gridSize": 10,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.7,
+    "score": 94
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "EOEROEISPG",
+      "NFLPLONGEE",
+      "CATAMARANE",
+      "LRULETERIN",
+      "MCTFAUNCNU",
+      "CEMFRAXHSG",
+      "REMIAAEIUA",
+      "DELLFUGPLL",
+      "MANGROVEEL",
+      "ESIALAFLLI"
+     ],
+     "words": [
+      {
+       "display": "CATAMARAN",
+       "letters": "CATAMARAN",
+       "row": 2,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "PÉNINSULE",
+       "letters": "PENINSULE",
+       "row": 0,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "ARCHIPEL",
+       "letters": "ARCHIPEL",
+       "row": 2,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "NAUFRAGE",
+       "letters": "NAUFRAGE",
+       "row": 1,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "MANGROVE",
+       "letters": "MANGROVE",
+       "row": 8,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "PLONGÉE",
+       "letters": "PLONGEE",
+       "row": 1,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "FALAISE",
+       "letters": "FALAISE",
+       "row": 9,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "LAGUNE",
+       "letters": "LAGUNE",
+       "row": 7,
+       "col": 9,
+       "direction": "N"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "KCERWPIHSD",
+      "SEASHOREEP",
+      "AONTLLHEVP",
+      "ACAAAVSSOL",
+      "PALEGMCHRE",
+      "AOAHONAOGK",
+      "IRIOOLWRNR",
+      "PENINSULAO",
+      "NIHPLODIMN",
+      "RZESNPLNNS"
+     ],
+     "words": [
+      {
+       "display": "CATAMARAN",
+       "letters": "CATAMARAN",
+       "row": 0,
+       "col": 1,
+       "direction": "SE"
+      },
+      {
+       "display": "PENINSULA",
+       "letters": "PENINSULA",
+       "row": 7,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "SHIPWRECK",
+       "letters": "SHIPWRECK",
+       "row": 0,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "MANGROVE",
+       "letters": "MANGROVE",
+       "row": 8,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "SEASHORE",
+       "letters": "SEASHORE",
+       "row": 1,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "SNORKEL",
+       "letters": "SNORKEL",
+       "row": 9,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "DOLPHIN",
+       "letters": "DOLPHIN",
+       "row": 8,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "LAGOON",
+       "letters": "LAGOON",
+       "row": 2,
+       "col": 4,
+       "direction": "S"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c2-l08",
+   "number": 8,
+   "theme": {
+    "fr": "Déserts",
+    "en": "Deserts"
+   },
+   "visualStyle": "STYLE_1",
+   "gridSize": 10,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.8,
+    "score": 97
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "EDORSCCDIY",
+      "DNEGARIMPN",
+      "BOMNADNEIS",
+      "AIAMAEUUVC",
+      "OPLRSVORRU",
+      "DROMADAIRE",
+      "NOTEEHURDA",
+      "CCIBNUANAG",
+      "ESCACTUSEC",
+      "COACAELBAS"
+     ],
+     "words": [
+      {
+       "display": "DROMADAIRE",
+       "letters": "DROMADAIRE",
+       "row": 5,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "CARAVANE",
+       "letters": "CARAVANE",
+       "row": 8,
+       "col": 9,
+       "direction": "NW"
+      },
+      {
+       "display": "SCORPION",
+       "letters": "SCORPION",
+       "row": 8,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "BÉDOUIN",
+       "letters": "BEDOUIN",
+       "row": 7,
+       "col": 3,
+       "direction": "NE"
+      },
+      {
+       "display": "SAHARA",
+       "letters": "SAHARA",
+       "row": 8,
+       "col": 7,
+       "direction": "NW"
+      },
+      {
+       "display": "MIRAGE",
+       "letters": "MIRAGE",
+       "row": 1,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "CACTUS",
+       "letters": "CACTUS",
+       "row": 8,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "DUNES",
+       "letters": "DUNES",
+       "row": 5,
+       "col": 5,
+       "direction": "SE"
+      },
+      {
+       "display": "SABLE",
+       "letters": "SABLE",
+       "row": 9,
+       "col": 9,
+       "direction": "W"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "OSCORPIONO",
+      "OAFDUISROD",
+      "NNAVARACYO",
+      "MDICSAHANR",
+      "ASSUMAACAS",
+      "ATOAOSRTCS",
+      "SOADSDAUPP",
+      "WRSACEESCD",
+      "OMIRAGEBGI",
+      "IISLCCNAGS"
+     ],
+     "words": [
+      {
+       "display": "SANDSTORM",
+       "letters": "SANDSTORM",
+       "row": 0,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "SCORPION",
+       "letters": "SCORPION",
+       "row": 0,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "CARAVAN",
+       "letters": "CARAVAN",
+       "row": 2,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "BEDOUIN",
+       "letters": "BEDOUIN",
+       "row": 8,
+       "col": 7,
+       "direction": "NW"
+      },
+      {
+       "display": "MIRAGE",
+       "letters": "MIRAGE",
+       "row": 8,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "CACTUS",
+       "letters": "CACTUS",
+       "row": 2,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "SAHARA",
+       "letters": "SAHARA",
+       "row": 1,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "display": "CANYON",
+       "letters": "CANYON",
+       "row": 5,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "OASIS",
+       "letters": "OASIS",
+       "row": 5,
+       "col": 2,
+       "direction": "S"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c2-l09",
+   "number": 9,
+   "theme": {
+    "fr": "Capitales",
+    "en": "Capitals"
+   },
+   "visualStyle": "STYLE_1",
+   "gridSize": 10,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.85,
+    "score": 100
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "WUVARSOVIE",
+      "AAMSTERDAM",
+      "SELLEXURBB",
+      "HUOISHKXKD",
+      "IIHSBDUIOO",
+      "NIKBEOREKE",
+      "GWCOJURTGI",
+      "TMONISUINU",
+      "OSTNCAPPAP",
+      "NTSEPADUBN"
+     ],
+     "words": [
+      {
+       "display": "WASHINGTON",
+       "letters": "WASHINGTON",
+       "row": 0,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "BRUXELLES",
+       "letters": "BRUXELLES",
+       "row": 2,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "STOCKHOLM",
+       "letters": "STOCKHOLM",
+       "row": 9,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "AMSTERDAM",
+       "letters": "AMSTERDAM",
+       "row": 1,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "BUDAPEST",
+       "letters": "BUDAPEST",
+       "row": 9,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "LISBONNE",
+       "letters": "LISBONNE",
+       "row": 2,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "VARSOVIE",
+       "letters": "VARSOVIE",
+       "row": 0,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "NAIROBI",
+       "letters": "NAIROBI",
+       "row": 9,
+       "col": 9,
+       "direction": "NW"
+      },
+      {
+       "display": "BANGKOK",
+       "letters": "BANGKOK",
+       "row": 9,
+       "col": 8,
+       "direction": "N"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "NBUDAPESTG",
+      "OAWWKNLMBR",
+      "BMIAUEALNS",
+      "SSLRSEWOEH",
+      "ITSSOALHAA",
+      "LEUANBRKNO",
+      "SRBWAMICAN",
+      "BDBANGKOKT",
+      "WASHINGTON",
+      "OMAWAADSWA"
+     ],
+     "words": [
+      {
+       "display": "WASHINGTON",
+       "letters": "WASHINGTON",
+       "row": 8,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "BRUSSELS",
+       "letters": "BRUSSELS",
+       "row": 7,
+       "col": 0,
+       "direction": "NE"
+      },
+      {
+       "display": "STOCKHOLM",
+       "letters": "STOCKHOLM",
+       "row": 9,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "AMSTERDAM",
+       "letters": "AMSTERDAM",
+       "row": 1,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "BUDAPEST",
+       "letters": "BUDAPEST",
+       "row": 0,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "LISBON",
+       "letters": "LISBON",
+       "row": 5,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "WARSAW",
+       "letters": "WARSAW",
+       "row": 1,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "NAIROBI",
+       "letters": "NAIROBI",
+       "row": 0,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "BANGKOK",
+       "letters": "BANGKOK",
+       "row": 7,
+       "col": 2,
+       "direction": "E"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c2-l10",
+   "number": 10,
+   "theme": {
+    "fr": "Tour du monde",
+    "en": "Around the world"
+   },
+   "visualStyle": "FINAL",
+   "gridSize": 12,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 1.0,
+    "score": 128
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "FRUETAROLPXE",
+      "RIERRDSHOATI",
+      "OEREEEVPNNRH",
+      "NXIHIPOAGOAP",
+      "TPAPRAYSIRVA",
+      "IERSUYASTAER",
+      "EDEITSGEUMRG",
+      "RINMNEEPDISO",
+      "ETIEEMUOEQET",
+      "EITHVERRLUER",
+      "NOITANITSEDA",
+      "TNENITNOCPPC"
+     ],
+     "words": [
+      {
+       "display": "EXPLORATEUR",
+       "letters": "EXPLORATEUR",
+       "row": 0,
+       "col": 11,
+       "direction": "W"
+      },
+      {
+       "display": "DESTINATION",
+       "letters": "DESTINATION",
+       "row": 10,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "CARTOGRAPHIE",
+       "letters": "CARTOGRAPHIE",
+       "row": 11,
+       "col": 11,
+       "direction": "N"
+      },
+      {
+       "display": "DÉPAYSEMENT",
+       "letters": "DEPAYSEMENT",
+       "row": 1,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "display": "ITINÉRAIRE",
+       "letters": "ITINERAIRE",
+       "row": 10,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "EXPÉDITION",
+       "letters": "EXPEDITION",
+       "row": 2,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "HÉMISPHÈRE",
+       "letters": "HEMISPHERE",
+       "row": 9,
+       "col": 3,
+       "direction": "N"
+      },
+      {
+       "display": "AVENTURIER",
+       "letters": "AVENTURIER",
+       "row": 10,
+       "col": 4,
+       "direction": "N"
+      },
+      {
+       "display": "PANORAMIQUE",
+       "letters": "PANORAMIQUE",
+       "row": 0,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "PASSEPORT",
+       "letters": "PASSEPORT",
+       "row": 2,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "CONTINENT",
+       "letters": "CONTINENT",
+       "row": 11,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "FRONTIÈRE",
+       "letters": "FRONTIERE",
+       "row": 0,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "LONGITUDE",
+       "letters": "LONGITUDE",
+       "row": 0,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "TRAVERSÉE",
+       "letters": "TRAVERSEE",
+       "row": 1,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "VOYAGEUR",
+       "letters": "VOYAGEUR",
+       "row": 2,
+       "col": 6,
+       "direction": "S"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "DNOITANITSED",
+      "YHPARGOTRACE",
+      "RRADNNISWTEI",
+      "AUSVEITULNXT",
+      "RFSEDEALOEPR",
+      "ERPNUERRNNEA",
+      "NOOTTSOEGIDV",
+      "INRUITLDITIE",
+      "TTTRTHPNTNTL",
+      "IIEEAGXAUOIE",
+      "IETRLIEWDCOR",
+      "EREHPSIMEHNG"
+     ],
+     "words": [
+      {
+       "display": "EXPLORATION",
+       "letters": "EXPLORATION",
+       "row": 10,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "display": "DESTINATION",
+       "letters": "DESTINATION",
+       "row": 0,
+       "col": 11,
+       "direction": "W"
+      },
+      {
+       "display": "CARTOGRAPHY",
+       "letters": "CARTOGRAPHY",
+       "row": 1,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "ADVENTURER",
+       "letters": "ADVENTURER",
+       "row": 1,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "EXPEDITION",
+       "letters": "EXPEDITION",
+       "row": 2,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "HEMISPHERE",
+       "letters": "HEMISPHERE",
+       "row": 11,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "WANDERLUST",
+       "letters": "WANDERLUST",
+       "row": 10,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "ITINERARY",
+       "letters": "ITINERARY",
+       "row": 9,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "CONTINENT",
+       "letters": "CONTINENT",
+       "row": 10,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "LONGITUDE",
+       "letters": "LONGITUDE",
+       "row": 3,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "SIGHTSEEING",
+       "letters": "SIGHTSEEING",
+       "row": 11,
+       "col": 5,
+       "direction": "N"
+      },
+      {
+       "display": "PASSPORT",
+       "letters": "PASSPORT",
+       "row": 1,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "FRONTIER",
+       "letters": "FRONTIER",
+       "row": 4,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "TRAVELER",
+       "letters": "TRAVELER",
+       "row": 3,
+       "col": 11,
+       "direction": "S"
+      },
+      {
+       "display": "LATITUDE",
+       "letters": "LATITUDE",
+       "row": 10,
+       "col": 4,
+       "direction": "N"
+      }
+     ]
+    }
+   }
+  }
+ ]
+}
