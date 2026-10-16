@@ -31,7 +31,7 @@ import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-enum class GameDialog { None, ConfirmQuit, ConfirmRestart, RewardedOffer }
+enum class GameDialog { None, ConfirmQuit, RewardedOffer }
 
 data class GameUiState(
     val level: Level,
@@ -47,6 +47,13 @@ data class GameUiState(
     val dialog: GameDialog = GameDialog.None,
     /** Incrémenté à chaque mauvaise sélection : déclenche la secousse de la grille. */
     val wrongToken: Int = 0,
+    /** Dernier mot trouvé + compteur : déclenche l'effet « mot trouvé » (capsule verrouillée, vague de lettres, étincelles). */
+    val foundToken: Int = 0,
+    val lastFoundIndex: Int = -1,
+    /** Incrémenté à chaque redémarrage : déclenche l'animation de mélange des lettres (aucune fenêtre de confirmation). */
+    val restartToken: Int = 0,
+    /** Incrémenté à chaque indice révélé : déclenche l'effet de révélation. */
+    val hintToken: Int = 0,
 )
 
 /** Ce dont le contrôleur a besoin de l'application (navigation, messages, rafraîchissement de la progression). */
@@ -67,7 +74,7 @@ class GameController(
     val language: Language,
     private val useCases: GameUseCases,
     private val feedback: FeedbackController,
-    clock: MonotonicClock,
+    private val clock: MonotonicClock,
     private val persistScope: CoroutineScope,
     private val readHintBalance: suspend () -> Int,
     private val host: GameHost,
@@ -82,6 +89,7 @@ class GameController(
     private var hintBusy = false
     private var adBusy = false
     private var victoryFailed = false
+    private var lastRestartAt = Long.MIN_VALUE / 2
 
     init {
         scope.launch {
@@ -145,6 +153,7 @@ class GameController(
                 feedback.play(Sound.CORRECT)
                 feedback.perform(HapticEffect.CONFIRM)
                 syncFromSession()
+                _ui.update { it.copy(foundToken = it.foundToken + 1, lastFoundIndex = event.wordIndex) }
                 persistSnapshot()
                 if (event.solved) win()
             }
@@ -193,7 +202,7 @@ class GameController(
                         feedback.play(Sound.HINT)
                         feedback.perform(HapticEffect.CONFIRM)
                         syncFromSession()
-                        _ui.update { it.copy(hintBalance = result.newBalance) }
+                        _ui.update { it.copy(hintBalance = result.newBalance, hintToken = it.hintToken + 1) }
                         persistSnapshot()
                         host.onProgressChanged()
                     }
@@ -237,23 +246,24 @@ class GameController(
     }
 
     // ---- Redémarrage, sortie, dialogues
+    /**
+     * Redémarrage immédiat, sans fenêtre de confirmation : la grille rejoue un mélange animé de ses lettres.
+     * Un court verrou évite les doubles déclenchements pendant l'animation.
+     */
     fun onRestartRequested() {
-        if (!canInteract()) return
-        if (session.hasStarted) setDialog(GameDialog.ConfirmRestart) else doRestart()
-    }
-
-    fun confirmRestart() {
-        setDialog(GameDialog.None)
-        doRestart()
-    }
-
-    private fun doRestart() {
+        val now = clock.nowMillis()
+        if (!canInteract() || now - lastRestartAt < RESTART_LOCK_MS) return
+        lastRestartAt = now
         session.restart()
-        feedback.play(Sound.MENU_CHANGE)
+        feedback.play(Sound.SHUFFLE)
+        feedback.perform(HapticEffect.CONFIRM)
         syncFromSession()
-        _ui.update { it.copy(selection = emptyList(), elapsedMillis = 0) }
+        _ui.update { it.copy(selection = emptyList(), elapsedMillis = 0, restartToken = it.restartToken + 1) }
         persistScope.launch { runCatching { useCases.clearSnapshots(level) } }
     }
+
+    /** Vrai pendant qu'un doigt trace sur la grille : aucune publicité ne doit s'afficher à ce moment. */
+    fun isGridBeingTouched(): Boolean = _ui.value.selection.isNotEmpty()
 
     fun onBackRequested() {
         when {
@@ -313,5 +323,7 @@ class GameController(
         const val WIN_PAUSE_MS = 450L
         const val MAX_SAVE_ATTEMPTS = 3
         const val RETRY_DELAY_MS = 800L
+        /** Durée du verrou après un redémarrage (≈ durée de l'animation de mélange). */
+        const val RESTART_LOCK_MS = 900L
     }
 }
