@@ -63,7 +63,7 @@ class AppContainer(val application: Application) {
         scope = appScope,
         ids = AdUnitIds(
             banner = application.getString(R.string.admob_banner_unit_id),
-            interstitial = application.getString(R.string.admob_interstitial_unit_id),
+            appOpen = application.getString(R.string.admob_app_open_unit_id),
             rewarded = application.getString(R.string.admob_rewarded_unit_id),
         ),
     )
