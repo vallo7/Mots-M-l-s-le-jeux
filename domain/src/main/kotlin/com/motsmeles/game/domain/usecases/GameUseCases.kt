@@ -15,10 +15,7 @@ import com.motsmeles.game.domain.ports.AdProvider
 import com.motsmeles.game.domain.ports.ProgressRepository
 import com.motsmeles.game.domain.ports.RewardedAdResult
 import com.motsmeles.game.domain.ports.UnavailableReason
-import com.motsmeles.game.domain.progress.AdMoment
 import com.motsmeles.game.domain.progress.GameSnapshot
-import com.motsmeles.game.domain.progress.InterstitialPolicy
-import com.motsmeles.game.domain.progress.LevelStartKind
 import com.motsmeles.game.domain.progress.ProgressRules
 import com.motsmeles.game.domain.progress.RandomSource
 
@@ -31,6 +28,10 @@ data class VictoryResult(
     val chapterCompleted: Boolean,
     val giftClaimable: Boolean,
     val nextLevelId: String?,
+    /** Niveaux terminés du chapitre avant / après cette victoire : alimente la barre de progression de fin de niveau. */
+    val chapterCompletedBefore: Int,
+    val chapterCompletedAfter: Int,
+    val chapterTotal: Int,
 )
 
 sealed interface HintUseResult {
@@ -59,25 +60,6 @@ class GameUseCases(
     private val ads: AdProvider,
     private val random: RandomSource,
 ) {
-    /**
-     * Démarrage d'un niveau (tap sur « Jouer »). Compte pour l'interstitiel 1 sur 2 puis, s'il est dû,
-     * l'affiche AVANT l'ouverture de l'écran de jeu. Ne bloque jamais : l'échec d'une annonce est ignoré.
-     */
-    suspend fun startLevel(level: Level): Boolean {
-        var offer = false
-        progress.update { state ->
-            val decision = InterstitialPolicy.onLevelStart(state, level.id, LevelStartKind.FRESH)
-            offer = decision.shouldOffer
-            decision.state
-        }
-        if (!offer || !InterstitialPolicy.canShowNow(AdMoment())) return false
-        return try {
-            ads.showInterstitialIfReady()
-        } catch (e: Exception) {
-            false
-        }
-    }
-
     suspend fun loadSnapshot(level: Level, language: Language): GameSnapshot? =
         progress.read().inProgress[ProgressRules.snapshotKey(level.id, language)]
 
@@ -115,6 +97,7 @@ class GameUseCases(
             previous = before.lastPraise,
             seed = level.id.hashCode().toLong() * 31 + before.completed.size,
         )
+        val countBefore = ProgressRules.chapterCompletedCount(catalog, before, level.chapterIndex)
         val after = progress.update { ProgressRules.completeLevel(it, level.id, stars, elapsed, praise) }
         val stored = after.completed.getValue(level.id)
         return VictoryResult(
@@ -126,6 +109,9 @@ class GameUseCases(
             chapterCompleted = ProgressRules.isChapterComplete(catalog, after, level.chapterIndex),
             giftClaimable = ProgressRules.isGiftClaimable(catalog, after, level.chapterIndex),
             nextLevelId = catalog.levelAfter(level.id)?.id,
+            chapterCompletedBefore = countBefore,
+            chapterCompletedAfter = ProgressRules.chapterCompletedCount(catalog, after, level.chapterIndex),
+            chapterTotal = catalog.chapters.firstOrNull { it.index == level.chapterIndex }?.levels?.size ?: Level.LEVELS_PER_CHAPTER,
         )
     }
 
@@ -149,7 +135,7 @@ class GameUseCases(
         }
     }
 
-    /** Cadeau de chapitre : 1 à 3 indices, une seule fois. Renvoie le gain, ou null si rien n'est réclamable. */
+    /** Trophée de chapitre (ex-cadeau) : 1 à 3 indices, une seule fois. Renvoie le gain, ou null si rien n'est réclamable. */
     suspend fun claimGift(chapterIndex: Int): Int? {
         var amount: Int? = null
         progress.update { state ->
@@ -160,7 +146,7 @@ class GameUseCases(
         return amount
     }
 
-    /** Publicité récompensée : la récompense (1 ou 2) n'est tirée qu'après confirmation du SDK. */
+    /** Publicité récompensée : la récompense (1 indice) n'est accordée qu'après confirmation du SDK. */
     suspend fun watchRewardedAd(): RewardOutcome {
         ads.rewardedUnavailableReason()?.let { return RewardOutcome.Unavailable(it) }
         return when (val result = ads.showRewarded()) {
